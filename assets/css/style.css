@@ -56,6 +56,18 @@ body {
   transform: translateX(0);
 }
 
+.menu__link.active {
+  background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.menu__link.active::before {
+  opacity: 1;
+  visibility: visible;
+}
+
 .menu__link:hover {
   background: linear-gradient(99.05deg, #bc3cd8 0.07%, #c54b8c 106.32%);
   -webkit-background-clip: text;
@@ -445,6 +457,11 @@ body {
   color: #e3e4e6;
 }
 
+.works,
+.about {
+  scroll-margin-top: 30px;
+}
+
 @media (max-width: 992px) {
   .about__container {
     flex-direction: column;
@@ -517,6 +534,11 @@ body {
 
   .card:not(:last-child) {
     margin-bottom: 50px;
+  }
+
+  .works,
+  .about {
+    scroll-margin-top: 70px;
   }
 }
 
